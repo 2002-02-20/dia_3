@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Estructura from "../Estructura";
+import Infoprecios from "../../InfoPrecios/Infoprecios";
 
 const Informacion = () => {
   const [billAmount, setBillAmount] = useState(0);
@@ -27,9 +28,13 @@ const Informacion = () => {
   }
 
 
- const total = (billAmount * tipPorcentage) / 100 / numPersonas
-  
-  
+ const tipAmount = (billAmount * tipPorcentage) / 100 / numPersonas
+
+ const total = (billAmount / numPersonas) + tipAmount
+
+  console.log(tipAmount.toFixed(2));
+  console.log(total.toFixed(2), 'total');
+
 
   return (
     <>
@@ -103,6 +108,7 @@ const Informacion = () => {
           />
         </label>
       </div>
+      
     </>
   );
 };

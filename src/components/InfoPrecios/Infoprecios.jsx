@@ -1,6 +1,7 @@
 import React from "react";
 import Precio from "../Estructura/Precios/Precio";
-import Informacion from "../Estructura/Informacion/Informacion";
+
+
 
 const Infoprecios = () => {
   return (
@@ -21,6 +22,7 @@ const Infoprecios = () => {
             idSpan={"total"}
             precioFinal={0}
           />
+          
         </div>
         <button type="button" id="reset-button" className="reset-button">
           RESET
